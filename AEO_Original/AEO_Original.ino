@@ -247,6 +247,11 @@ void loop() {
     }
   }
   delay(4000);
+
+  //note: offset is slightly too small! figure out a more specific value in the future. same true for below offset as well.
+  for(int offset = 0; offset < 13000; offset++){
+    step_forward();
+  }
   
   for(int deg = 0; deg < 90; deg++){
     for (loopCounter = 0; loopCounter < 500; loopCounter++){
@@ -255,8 +260,10 @@ void loop() {
     }
   }
   delay(4000);
+
+  for(int offset = 0; offset < 13000; offset++){
+    step_backward();
+  }
   //web_listen_for_clients();
   //web_talk_to_clients();
 }
-
-
