@@ -34,7 +34,6 @@ WiFiServer server(443); //
 //function to listen for incoming clients. This function will be called in loop();
 void web_listen_for_clients() {
   Serial.println("Web listen is working");
-  Serial.println("                                                            ");
   delay(15000);
   // listen for incoming clients
   // http://www.shpeua.org/presidents-message.html
@@ -237,9 +236,6 @@ void setup() {
 }
 
 void loop() {
-  //printWifiStatus();
-  //read_angle();
-  //exercise();
   for(int deg = 0; deg < 90; deg++){
     for (loopCounter = 0; loopCounter < 500; loopCounter++){
       Serial.println(loopCounter);
@@ -264,6 +260,4 @@ void loop() {
   for(int offset = 0; offset < 13000; offset++){
     step_backward();
   }
-  //web_listen_for_clients();
-  //web_talk_to_clients();
 }
