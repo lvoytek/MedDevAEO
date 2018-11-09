@@ -142,10 +142,8 @@ void exercise()
 		//FAngle = 999;
 		flex();
 		FeedbackAngle = AngleValue;
-		web_talk_to_clients();
 		extend();
 		FeedbackAngle = AngleValue;
-		web_talk_to_clients();
 		RepCounter += 1;
 	}
 }

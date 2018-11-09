@@ -1,5 +1,4 @@
-#include <SPI.h>
-#include <WiFi101.h>
+#include "AEO_Refactored.h"
 
 //Here are the wifi details first WiFi network name and then password 
 const PROGMEM char ssid[] = "AndroidAP";
@@ -262,5 +261,11 @@ void loop()
 		}
 	}
 	delay(4000);
+}
+
+//Reboot the device
+void reboot()
+{
+	Watchdog.enable(2);
 }
 
