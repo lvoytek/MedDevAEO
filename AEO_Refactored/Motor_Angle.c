@@ -89,18 +89,18 @@ void start_motor()
 	}
 
 	else if (TargetExtendString.substring(26) == ",") {
-	TargetExtendString = TargetExtendString.substring(23);
-	Serial.println("TargetExtend 2");
-	TargetExtendString.remove(2);
-	TargetExtend = TargetExtendString.toInt();
-	Serial.println(TargetExtend);
+		TargetExtendString = TargetExtendString.substring(23);
+		Serial.println("TargetExtend 2");
+		TargetExtendString.remove(2);
+		TargetExtend = TargetExtendString.toInt();
+		Serial.println(TargetExtend);
 	}
 	else if (TargetExtendString.substring(27) == ",") {
-	TargetExtendString = TargetExtendString.substring(23);
-	Serial.println("TargetExtend 3");
-	TargetExtendString.remove(3);
-	TargetExtend = TargetExtendString.toInt();
-	Serial.println(TargetExtend);
+		TargetExtendString = TargetExtendString.substring(23);
+		Serial.println("TargetExtend 3");
+		TargetExtendString.remove(3);
+		TargetExtend = TargetExtendString.toInt();
+		Serial.println(TargetExtend);
 	}
 
 	TargetFlexString = TargetFlexString.substring(18);

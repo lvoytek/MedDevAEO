@@ -1,10 +1,12 @@
-void web_talk_to_clients() {
+void web_talk_to_clients()
+{
 	const char* host = "recovery-helper.firebaseio.com";//"firebasestorage.googleapis.com";//"recovery-helper.firebaseio.com";//"firebasestorage.googleapis.com";//"docs-examples.firebaseio.com";//"csb.stanford.edu";
 	WiFiClient client;
 	const int httpPort = 443;
 	client.stop(); 
 	client.flush();
-	if (!client.connectSSL(host, httpPort)) {
+	if (!client.connectSSL(host, httpPort)) 
+	{
 		Serial.println("connection failed");
 		delay(1000);
 		//return;
@@ -18,7 +20,8 @@ void web_talk_to_clients() {
 	Serial.println("Here we go");
 	
 	//while(client.available()){
-	if (client.connectSSL(host, 443)) { 
+	if (client.connectSSL(host, 443)) 
+	{ 
 		String toSend = "PUT /patients/fGB7g1BNAlU0si9ohBouN03QcGz1.json ";
 		toSend += "HTTP/1.1\r\n"; 
 		toSend += "Host: "; 
