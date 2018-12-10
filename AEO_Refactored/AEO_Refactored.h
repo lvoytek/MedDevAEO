@@ -7,7 +7,12 @@
 #include <WiFi101.h> //Wifi handling library
 #include <Adafruit_SleepyDog.h> //Watchdog timer to reboot device on command
 
+#include "Motor_Angle.h"
 
+//Wifi test auth details 
+const char ssid[] = "AndroidAP";
+const char pass[] = "Password123";
+const int keyIndex = 0;
 
 
 

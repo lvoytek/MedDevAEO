@@ -1,10 +1,5 @@
 #include "AEO_Refactored.h"
 
-//Here are the wifi details first WiFi network name and then password 
-const PROGMEM char ssid[] = "AndroidAP";
-const PROGMEM char pass[] = "Password123";
-const PROGMEM int keyIndex = 0; // your network key Index number (needed only for WEP)
-
 //create status flags
 int status = WL_IDLE_STATUS;
 int status2 = 0; //this flag was for trouble shooting using WiFi.status();
@@ -12,22 +7,11 @@ int counter = 0;
 int loopCounter = 0;
 int loopCounter2 = 0;
 
-//Here are the variables that will be used to parse the lines of the firebase database
-//First the strings are set to the lines of interest in the database
-//Then later the strings will be manipulated to find the target angles, number of reps, and start flag
-String StartString = "true";
-String Start = "true";
-String ExerciseRepsString = "3";
-int ExerciseReps = 3;
-String TargetExtendString = "0";
-int TargetExtend = 0;
-String TargetFlexString = "91";
-int TargetFlex = 91;
-String ExerciseTodayString = "";
+
 
 // local port {aka your port to the internet..}
 // WiFiServer server(80);
-//Set the WiFi port
+//Set the WiFi httpPort
 WiFiServer server(443); //
 
 //function to listen for incoming clients. This function will be called in loop();

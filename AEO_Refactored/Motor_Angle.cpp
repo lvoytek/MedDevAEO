@@ -1,12 +1,10 @@
-const PROGMEM int SensorPin = A0; 
-const PROGMEM int dirPin = 7;  //stepper motor //PIN ASSIGNMENTS! 
-const PROGMEM int stepPin = 6; 
-const PROGMEM int sleepPin = 18;
+#include "Motor_Angle.h"
+
 int SensorValue = 0;
 double SensorVoltage = 0;
 double AngleValueFloat = 0;
 int AngleValue = 0;
-const PROGMEM int AngleCorrectionFactor = 4;
+const int AngleCorrectionFactor = 4;
 float AdditionalAngleCorrector = 0;
 //int MaxExtensionAngle = 999;
 //int MaxAngle = 0;
@@ -14,18 +12,12 @@ int FeedbackAngle = 0;
 int ExtensionHitCounter = 0;
 int FlexionHitCounter = 0;
 //  AngleValue = (R1 * SensorVoltage) / ((Vin * (Resistance2 - Resistance1) / (Angle2 - Angle1))  - (SensorVoltage * (Resistance2 - Resistance1) / (Angle2 - Angle1)));
-const PROGMEM float R1 = 11470;
-const PROGMEM float Angle1 = 0;
-const PROGMEM float Angle2 = 90;//52
-const PROGMEM float Resistance1 = 2280;
-const PROGMEM float Resistance2 = 3880;
-const PROGMEM float Vin = 3.3;
-const PROGMEM float PotSlope = (Resistance2 - Resistance1) / (Angle2 - Angle1);
-const PROGMEM float PotIntercept = (Resistance2 + Resistance1 - PotSlope*(Angle1 + Angle2)) / float(2);
-int stepCounter = 0;
 
-boolean FWD = LOW;
-boolean REV = HIGH;
+int stepCounter = 0;
+int counter = 0;
+
+bool FWD = LOW;
+bool REV = HIGH;
   
 
 void setup_motor() {
