@@ -9,12 +9,6 @@
 
 #include "Motor_Angle.h"
 
-//Wifi test auth details 
-const char ssid[] = "AndroidAP";
-const char pass[] = "Password123";
-const int keyIndex = 0;
-
-
 
 
 
